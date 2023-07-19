@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배경색 바꾸기</title>
+	<script>
+		var choice = -1;
+		function changeColor () {
+			var bgColors = ['#ff0', '#6c0', '#fcf', '#cf0', '#39f'];
+			do {
+				var ranNum = Math.floor(Math.random() * 5);				// 0 ~ 4
+				if (ranNum !== choice) {
+					choice = ranNum;
+					break;
+				}
+			} while (choice === ranNum);
+
+			var bodyElem = document.getElementById("theBody");
+			bodyElem.style.backgroundColor = bgColors[choice];
+
+			var numElem = document.getElementById("num");
+			numElem.innerHTML = choice;
+		}
+	</script>
+</head>
+<body id="theBody">
+	<button onclick="changeColor();">배경색 바꾸기</button>
+	<span>random number: </span><span id="num"></span>
+</body>
+</html>

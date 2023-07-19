@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>팝업을 띄우는 부모 창</title>
+
+</head>
+<body>
+	<button id="newWindow">새창 띄우기</button>
+	<script>
+		//let btn = document.getElementsByTagName("button")[0];		// tagname으로 부르면 HTMLCollection 객체가 반환되므로 subscript로 다시 특정해야 한다.
+		let btn = document.getElementById("newWindow");
+		btn.onclick = () => window.open("chap04_03_popup_child.html", "pop1", "width=450, height=670, left=200, top=0");
+	</script>
+</body>
+</html>
